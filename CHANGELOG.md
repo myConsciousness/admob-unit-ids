@@ -1,3 +1,7 @@
+### 1.0.2
+
+- Fixed some documents.
+
 ### 1.0.1
 
 - Support cross platform test unit ids.
