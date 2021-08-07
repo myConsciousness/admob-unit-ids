@@ -2,6 +2,8 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'dart:io';
+
 /// The abstract class that represents the manager of AdMob Unit ID.
 ///
 /// ### 1. What you need to override
@@ -54,48 +56,57 @@
 ///  factory DemoAdmobUnitIDs.getInstance() => _singletonInstance;
 ///
 ///  @override
-///  String get releaseAppOpen => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseAppOpen => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseBanner => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseBanner => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseInterstitial => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseInterstitial => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseInterstitialVideo => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseInterstitialVideo => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseNativeAdvanced => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseNativeAdvanced => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseNativeAdvancedVideo => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseNativeAdvancedVideo => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseRewarded => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseRewarded => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 ///
 ///  @override
-///  String get releaseRewardedInterstitial => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
+///  String get releaseRewardedInterstitial => Platform.isAndroid
+///      ? 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx'
+///      : 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 /// }
 ///
 ///void main() {
 ///  final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs.getInstance();
 ///
-///  // => ca-app-pub-3940256099942544/3419835294 or unit id for releasing.
+///  // => Unit id for debugging or unit id for releasing.
 ///  print(admobUnitIDs.appOpen);
-///  // => ca-app-pub-3940256099942544/6300978111 or unit id for releasing.
 ///  print(admobUnitIDs.banner);
-///  // => ca-app-pub-3940256099942544/1033173712 or unit id for releasing.
 ///  print(admobUnitIDs.interstitial);
-///  // => ca-app-pub-3940256099942544/8691691433 or unit id for releasing.
 ///  print(admobUnitIDs.interstitialVideo);
-///  // => ca-app-pub-3940256099942544/5224354917 or unit id for releasing.
 ///  print(admobUnitIDs.nativeAdvanced);
-///  // => ca-app-pub-3940256099942544/5354046379 or unit id for releasing.
 ///  print(admobUnitIDs.nativeAdvancedVideo);
-///  // => ca-app-pub-3940256099942544/2247696110 or unit id for releasing.
 ///  print(admobUnitIDs.rewarded);
-///  // => ca-app-pub-3940256099942544/1044960115 or unit id for releasing.
 ///  print(admobUnitIDs.rewardedInterstitial);
 ///}
 /// ```
@@ -104,33 +115,44 @@ abstract class AdmobUnitIDs {
   static const bool release = const bool.fromEnvironment('dart.vm.product');
 
   /// The test unit id of app open.
-  static const String _testAppOpen = 'ca-app-pub-3940256099942544/3419835294';
+  static final String _testAppOpen = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/3419835294'
+      : 'ca-app-pub-3940256099942544/5662855259';
 
   /// The test unit id of banner.
-  static const String _testBanner = 'ca-app-pub-3940256099942544/6300978111';
+  static final String _testBanner = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/6300978111'
+      : 'ca-app-pub-3940256099942544/2934735716';
 
   /// The test unit id of interstitial.
-  static const String _testInterstitial =
-      'ca-app-pub-3940256099942544/1033173712';
+  static final String _testInterstitial = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/1033173712'
+      : 'ca-app-pub-3940256099942544/4411468910';
 
   /// The test unit id of interstitial video.
-  static const String _testInterstitialVideo =
-      'ca-app-pub-3940256099942544/8691691433';
+  static final String _testInterstitialVideo = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/8691691433'
+      : 'ca-app-pub-3940256099942544/5135589807';
 
   /// The test unit id of rewarded.
-  static const String _testRewarded = 'ca-app-pub-3940256099942544/5224354917';
+  static final String _testRewarded = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/5224354917'
+      : 'ca-app-pub-3940256099942544/1712485313';
 
   /// The test unit id of rewarded interstitial.
-  static const String _testRewardedInterstitial =
-      'ca-app-pub-3940256099942544/5354046379';
+  static final String _testRewardedInterstitial = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/5354046379'
+      : 'ca-app-pub-3940256099942544/6978759866';
 
   /// The test unit id of native advanced.
-  static const String _testNativeAdvanced =
-      'ca-app-pub-3940256099942544/2247696110';
+  static final String _testNativeAdvanced = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/2247696110'
+      : 'ca-app-pub-3940256099942544/3986624511';
 
   /// The test unit id of native advanced video.
-  static const String _testNativeAdvancedVideo =
-      'ca-app-pub-3940256099942544/1044960115';
+  static final String _testNativeAdvancedVideo = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/1044960115'
+      : 'ca-app-pub-3940256099942544/2521693316';
 
   /// Returns the release unit id of app open.
   String get releaseAppOpen;
