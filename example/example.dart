@@ -6,6 +6,16 @@ import 'package:admob_unit_ids/admob_unit_ids.dart';
 
 /// The example class that demonstraits [AdmobUnitIDs].
 class DemoAdmobUnitIDs extends AdmobUnitIDs {
+  /// The singleton instance of [DemoAdmobUnitIDs].
+  static final DemoAdmobUnitIDs _singletonInstance =
+      DemoAdmobUnitIDs._internal();
+
+  /// The internal default constructor.
+  DemoAdmobUnitIDs._internal();
+
+  /// Returns the singleton instance of [DemoAdmobUnitIDs].
+  factory DemoAdmobUnitIDs.getInstance() => _singletonInstance;
+
   @override
   String get releaseAppOpen => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 
@@ -35,7 +45,7 @@ class DemoAdmobUnitIDs extends AdmobUnitIDs {
 }
 
 main() {
-  final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs();
+  final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs.getInstance();
 
   // => ca-app-pub-3940256099942544/3419835294 or unit id for releasing.
   print(admobUnitIDs.appOpen);
