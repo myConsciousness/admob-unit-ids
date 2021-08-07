@@ -15,8 +15,8 @@
     - [1.3.1. Get library](#131-get-library)
     - [1.3.2. Import and extend abstract class](#132-import-and-extend-abstract-class)
     - [1.3.3. Override methods](#133-override-methods)
-    - [Call methods to get AdMob Unit IDs](#call-methods-to-get-admob-unit-ids)
-    - [1.3.4. Overview](#134-overview)
+    - [1.3.4. Call methods to get AdMob Unit IDs](#134-call-methods-to-get-admob-unit-ids)
+    - [1.3.5. Overview](#135-overview)
   - [1.4. More Information](#14-more-information)
 
 <!-- /TOC -->
@@ -90,7 +90,7 @@ class DemoAdmobUnitIDs extends AdmobUnitIDs {
 }
 ```
 
-### Call methods to get AdMob Unit IDs
+### 1.3.4. Call methods to get AdMob Unit IDs
 
 If you override the above abstract methods in a class that extends from this abstract class, basically no need to use the overridden methods directly. But you can use the methods defined in this abstract class to get the unit ID depends on the application startup status.
 
@@ -130,7 +130,7 @@ void main() {
 }
 ```
 
-### 1.3.4. Overview
+### 1.3.5. Overview
 
 ```dart
 import 'package:admob_unit_ids/admob_unit_ids.dart';
