@@ -4,10 +4,9 @@
 
 /// The abstract class that represents the manager of AdMob Unit ID.
 ///
+/// ### 1. What you need to override
 ///
-/// ### 1. What you need to implement
-///
-/// By implementing the following abstract methods of this abstract class,
+/// By overriding the following abstract methods of this abstract class,
 /// you can easily manage and use AdMob's unit ID for debugging and releasing.
 ///
 /// - [releaseAppOpen]
@@ -21,13 +20,13 @@
 ///
 /// ### 2. What you should use then
 ///
-/// If you implement the above abstract methods in a class that inherits from this abstract class,
-/// basically no need to use the implemented methods directly,
-/// but use the following methods defined in this abstract class to get the unit ID.
+/// If you override the above abstract methods in a class that extends from this abstract class,
+/// basically no need to use the overridden methods directly,
+/// but use the following methods defined in this abstract class to get the unit ID depends on the application startup status.
 ///
 /// The following methods check the application startup status,
 /// and returns the unit ID for testing when debugging,
-/// and returns the release unit ID implemented in concrete class inherited this abstract class when releasing.
+/// and returns the release unit ID implemented in concrete class extended this abstract class when releasing.
 ///
 /// - [appOpen]
 /// - [banner]
