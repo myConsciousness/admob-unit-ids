@@ -1,6 +1,6 @@
 name: admob_unit_ids
 description: This is a library that provides a common structure for managing AdMob unit IDs licensed under BSD 3-Clause.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/myConsciousness/admob-unit-ids
 
 environment:
