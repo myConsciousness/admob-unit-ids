@@ -23,8 +23,8 @@
 
 ## 1.2. Motivation
 
-1. Provide an easier and more intuitive library for the Line Notify API in the Dart language.
-2. Provide an interface that is aware only of the Line Notify API token and the message to be sent.
+1. Provide common functionality regarding unit IDs when implementing AdMob.
+2. Reduce redundant settings when deploying AdMob.
 
 ## 1.3. How To Use
 
