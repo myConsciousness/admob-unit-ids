@@ -108,7 +108,7 @@ The following methods check the application startup status, and returns the unit
 | rewardedInterstitial | Returns the unit id of rewarded interstitial for debugging or releasing. |
 
 ```dart
-main() {
+void main() {
   final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs();
 
   // => ca-app-pub-3940256099942544/3419835294 or unit id for releasing.
@@ -170,7 +170,7 @@ class DemoAdmobUnitIDs extends AdmobUnitIDs {
   String get releaseRewardedInterstitial => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 }
 
-main() {
+void main() {
   final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs.getInstance();
 
   // => ca-app-pub-3940256099942544/3419835294 or unit id for releasing.

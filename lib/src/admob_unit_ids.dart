@@ -78,7 +78,7 @@
 ///  String get releaseRewardedInterstitial => 'ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx';
 /// }
 ///
-///main() {
+///void main() {
 ///  final AdmobUnitIDs admobUnitIDs = DemoAdmobUnitIDs.getInstance();
 ///
 ///  // => ca-app-pub-3940256099942544/3419835294 or unit id for releasing.
