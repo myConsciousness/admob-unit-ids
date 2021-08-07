@@ -3,7 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'dart:io';
-
 import 'package:admob_unit_ids/admob_unit_ids.dart';
 
 /// The example class that demonstraits [AdmobUnitIDs].
