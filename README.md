@@ -61,7 +61,7 @@ class DemoAdmobUnitIDs extends AdmobUnitIDs {
 | releaseRewardedInterstitial | Should return unit id of rewarded interstitial for releasing. |
 
 ```dart
-import 'dart:io';
+import 'package:universal_io/io.dart';
 import 'package:admob_unit_ids/admob_unit_ids.dart';
 
 class DemoAdmobUnitIDs extends AdmobUnitIDs {
@@ -143,7 +143,7 @@ void main() {
 ### 1.3.5. Overview
 
 ```dart
-import 'dart:io';
+import 'package:universal_io/io.dart';
 import 'package:admob_unit_ids/admob_unit_ids.dart';
 
 class DemoAdmobUnitIDs extends AdmobUnitIDs {
