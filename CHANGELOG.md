@@ -1,9 +1,12 @@
 # Release Note
 
+## 1.0.3
+
+- Fixed the dependency.
+
 ## 1.0.2
 
 - Fixed some documents.
-- Fixed the dependency.
 
 ## 1.0.1
 
