@@ -214,12 +214,9 @@ void main() {
 
 ## 1.4. More Information
 
-`Admob Unit IDs` was designed and implemented by Kato Shinya, who works as a freelance developer.
-
-Regardless of the means or content of communication, I would love to hear from you if you have any questions or concerns. I do not check my email box very often so a response may be delayed, anyway thank you for your interest!
+`AdmobUnitIDs` was designed and implemented by **_Kato Shinya_**.
 
 - [Creator Profile](https://github.com/myConsciousness)
-- [Creator Website](https://myconsciousness.github.io)
 - [License](https://github.com/myConsciousness/admob-unit-ids/blob/main/LICENSE)
 - [Release Note](https://github.com/myConsciousness/admob-unit-ids/releases)
 - [File a Bug](https://github.com/myConsciousness/admob-unit-ids/issues)
